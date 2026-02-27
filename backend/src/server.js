@@ -83,16 +83,24 @@ app.get("/health", (req, res) => {
 });
 
 // ================= SERVE FRONTEND (PRODUCTION) =================
-if (ENV.NODE_ENV === "production") {
+// if (ENV.NODE_ENV === "production") {
+//   const frontendPath = path.join(__dirname, "../../frontend/dist");
+
+//   // serve static files
+//   app.use(express.static(frontendPath));
+
+//   // SPA fallback
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.join(frontendPath, "index.html"));
+//   });
+if (process.env.NODE_ENV === "production") {
   const frontendPath = path.join(__dirname, "../../frontend/dist");
 
-  // serve static files
   app.use(express.static(frontendPath));
 
-  // SPA fallback
- app.get(/.*/, (req, res) => {
-  res.sendFile(path.join(frontendPath, "index.html"));
-});
+  app.get(/.*/, (req, res) => {
+    res.sendFile(path.join(frontendPath, "index.html"));
+  });
 }
 
 // ================= START SERVER =================
