@@ -125,6 +125,7 @@ import path from "path";
 import cors from "cors";
 import { serve } from "inngest/express";
 import { clerkMiddleware } from "@clerk/express";
+import fs from "fs";
 
 import { ENV } from "./lib/env.js";
 import { connectDB } from "./lib/db.js";
@@ -161,7 +162,7 @@ app.get("/health", (req, res) => {
 //   });
 // }
 if (process.env.NODE_ENV === "production") {
-  const frontendPath = path.join(process.cwd(), "frontend", "dist");
+  const frontendPath = path.join(process.cwd(), "..", "frontend", "dist");
 
   console.log("📁 Serving frontend from:", frontendPath);
 
