@@ -163,6 +163,8 @@ app.get("/health", (req, res) => {
 if (process.env.NODE_ENV === "production") {
   const frontendPath = path.join(process.cwd(), "frontend", "dist");
 
+  console.log("📁 Serving frontend from:", frontendPath);
+
   app.use(express.static(frontendPath));
 
   app.get(/.*/, (req, res) => {
