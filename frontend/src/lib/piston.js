@@ -49,10 +49,22 @@ export async function executeCode(language, code) {
       };
     }
 
+    // const data = await response.json();
+
+    // const output = data.run.output || "";
+    // const stderr = data.run.stderr || "";
     const data = await response.json();
 
-    const output = data.run.output || "";
-    const stderr = data.run.stderr || "";
+// handle unexpected response shape
+if (!data || !data.run) {
+  return {
+    success: false,
+    error: data?.message || "Invalid response from execution server",
+  };
+}
+
+const output = data.run.output || "";
+const stderr = data.run.stderr || "";
 
     if (stderr) {
       return {
