@@ -126,6 +126,7 @@ import cors from "cors";
 import { serve } from "inngest/express";
 import { clerkMiddleware } from "@clerk/express";
 import fs from "fs";
+import pistonRoutes from "./routes/pistonRoute.js";
 
 import { ENV } from "./lib/env.js";
 import { connectDB } from "./lib/db.js";
@@ -146,6 +147,7 @@ app.use(clerkMiddleware());
 app.use("/api/inngest", serve({ client: inngest, functions }));
 app.use("/api/chat", chatRoutes);
 app.use("/api/sessions", sessionRoutes);
+app.use("/api/piston", pistonRoutes);
 
 app.get("/health", (req, res) => {
   res.status(200).json({ msg: "API is up and running" });
