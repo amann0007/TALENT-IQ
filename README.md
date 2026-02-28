@@ -1,65 +1,51 @@
-✨ Full-Stack Interview Platform
+# ✨ Full-Stack Interview Platform
 
-A modern real-time coding interview platform that replicates a real technical interview environment with live coding, video communication, and automated evaluation.
+A modern **real-time coding interview platform** that replicates a real technical interview environment with live coding, video communication, and automated evaluation.
 
-🚀 Features
+---
 
-🧑‍💻 VSCode-like online code editor
+## 🚀 Features
 
-🔐 Authentication with Clerk
+- 🧑‍💻 VSCode-like online code editor  
+- 🔐 Authentication with Clerk  
+- 🎥 1-on-1 video interview rooms  
+- 💬 Real-time chat messaging  
+- 🖥️ Screen sharing & recording  
+- 🔊 Mic & camera toggle  
+- ⚙️ Secure code execution environment  
+- 🎯 Automatic test-case evaluation  
+- 🎉 Success confetti & failure notifications  
+- 🧩 Practice problems (solo mode)  
+- 🔒 Room locking (max 2 participants)  
+- 🧠 Background jobs with Inngest  
+- 🧭 Dashboard with live stats  
 
-🎥 1-on-1 video interview rooms
+---
 
-💬 Real-time chat messaging
+## 🏗️ Tech Stack
 
-🖥️ Screen sharing & recording
+### Frontend
+- React (Vite)
+- TanStack Query
+- Clerk Authentication
+- Stream Video SDK
 
-🔊 Mic & camera toggle
+### Backend
+- Node.js
+- Express
+- MongoDB
+- Inngest
 
-⚙️ Secure code execution environment
+### Dev Tools
+- Git & GitHub workflow
+- CodeRabbit PR analysis
+- Deployment on Sevalla
 
-🎯 Automatic test-case evaluation
+---
 
-🎉 Success confetti & failure notifications
+## 📂 Project Structure
 
-🧩 Practice problems (solo mode)
-
-🔒 Room locking (max 2 participants)
-
-🧠 Background jobs with Inngest
-
-🧭 Dashboard with live stats
-
-🏗️ Tech Stack
-Frontend
-
-React (Vite)
-
-TanStack Query
-
-Clerk Authentication
-
-Stream Video SDK
-
-Backend
-
-Node.js
-
-Express
-
-MongoDB
-
-Inngest
-
-Dev Tools
-
-Git & GitHub workflow
-
-CodeRabbit PR analysis
-
-Deployment on Sevalla
-
-📂 Project Structure
+```
 .
 ├── backend
 │   ├── src
@@ -68,8 +54,15 @@ Deployment on Sevalla
 │   ├── src
 │   └── package.json
 └── README.md
-⚙️ Environment Variables
-Backend (/backend/.env)
+```
+
+---
+
+## ⚙️ Environment Variables
+
+### Backend (`/backend/.env`)
+
+```
 PORT=3000
 NODE_ENV=development
 
@@ -85,60 +78,80 @@ CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 CLERK_SECRET_KEY=your_clerk_secret_key
 
 CLIENT_URL=http://localhost:5173
-Frontend (/frontend/.env)
+```
+
+### Frontend (`/frontend/.env`)
+
+```
 VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 VITE_API_URL=http://localhost:3000/api
 VITE_STREAM_API_KEY=your_stream_api_key
-🧪 Running Locally
-1️⃣ Clone the repository
+```
+
+---
+
+## 🧪 Running Locally
+
+### 1️⃣ Clone the repository
+
+```bash
 git clone https://github.com/amann0007/TALENT-IQ
 cd interview-platform
-2️⃣ Run Backend
+```
+
+### 2️⃣ Run Backend
+
+```bash
 cd backend
 npm install
 npm run dev
-3️⃣ Run Frontend
+```
+
+### 3️⃣ Run Frontend
+
+```bash
 cd frontend
 npm install
 npm run dev
-🧑‍💻 How It Works
+```
 
-Sign up or log in
+---
 
-Create or join an interview room
+## 🧑‍💻 How It Works
 
-Collaborate via video & chat
+1. Sign up or log in  
+2. Create or join an interview room  
+3. Collaborate via video & chat  
+4. Write and run code  
+5. Get instant feedback  
 
-Write and run code
+---
 
-Get instant feedback
+## 📈 Future Improvements
 
-📈 Future Improvements
+- AI interview feedback  
+- Multi-participant rooms  
+- Question bank CMS  
+- Interview analytics dashboard  
+- Code playback timeline  
 
-AI interview feedback
+---
 
-Multi-participant rooms
+## 🤝 Contributing
 
-Question bank CMS
+1. Fork the repository  
+2. Create a feature branch  
+3. Commit your changes  
+4. Open a Pull Request  
 
-Interview analytics dashboard
+---
 
-Code playback timeline
-
-🤝 Contributing
-
-Fork the repository
-
-Create a feature branch
-
-Commit your changes
-
-Open a Pull Request
-
-⭐ Support
+## ⭐ Support
 
 If you like this project, please give it a ⭐ on GitHub!
 
-📜 License
+---
+
+## 📜 License
 
 MIT License © 2026
